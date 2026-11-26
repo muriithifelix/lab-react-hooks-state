@@ -1,13 +1,14 @@
 import React from 'react'
 
 const DarkModeToggle = ({ darkMode, setDarkMode }) => {
-  // TODO: Implement dark mode toggle logic
-    return (
+  const handleToggle = () => {
+    setDarkMode((previousMode) => !previousMode)
+  }
 
-    <button onClick={() => setDarkMode(!darkMode)}>
-      oggle {darkMode ? 'Light Mode' : 'Dark Mode'}
-      {darkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
+  return (
+    <button onClick={handleToggle}>
+      Toggle {darkMode ? 'Light Mode' : 'Dark Mode'}
+    </button>
   )
 }
 
